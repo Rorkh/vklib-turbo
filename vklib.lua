@@ -64,8 +64,6 @@ function vk:Session(token, options)
                                         inst:add_callback(function()
                                                 local res = coroutine.yield(turbo.async.HTTPClient({verify_ca=false}):fetch(req))
 
-                                                print(res.body)
-
                                                 local error = res.error
                                                 if error then
                                                         callb(error)
