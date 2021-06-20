@@ -1,5 +1,5 @@
 package = "vklib"
-version = "1.0.0-0"
+version = "1.0.0-1"
 source = {
 	url = "git+https://github.com/Rorkh/vklib-turbo"
 }
@@ -9,7 +9,8 @@ description = {
 	maintainer = "Rorkh <kremlebotone@gmail.com>"
 }
 dependencies = {
-	"turbo >= 2.1"
+	"turbo >= 2.1",
+	"lua-cjson >= 2.1"
 }
 build = {
 	type = "builtin",

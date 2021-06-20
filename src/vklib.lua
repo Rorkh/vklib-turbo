@@ -3,7 +3,7 @@ local vk = {}
 _G.TURBO_SSL = true
 
 local turbo = require("turbo")
-local escape = turbo.escape
+local json = require("cjson")
 
 --
 -- Internal
@@ -69,7 +69,7 @@ function vk:Session(token, options)
                                                         callb(error)
                                                 else
                                                         local body = res.body
-                                                        callb(obj.options.raw and body or escape.json_decode(body))
+                                                        callb(obj.options.raw and body or json.decode(body))
                                                 end
 
                                                 inst:close()
